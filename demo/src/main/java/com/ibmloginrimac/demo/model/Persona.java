@@ -22,8 +22,15 @@ public class Persona {
     private Integer edad;
     @Column(name="RUC",nullable = false)
     private Integer RUC;
+    
+
+    @OneToOne(mappedBy = "persona")
+    @JoinColumn(name="Fid_direccion", insertable = false, updatable = false)
+    private Direccion direccion;
+    
     @Column(name="Activo")
     private boolean activo=true;
+    
     public Persona() {
     
     }

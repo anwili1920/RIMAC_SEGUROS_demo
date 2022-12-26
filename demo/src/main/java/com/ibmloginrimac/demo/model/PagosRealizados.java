@@ -2,13 +2,10 @@ package com.ibmloginrimac.demo.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "CuentaBancaria")
-public class CuentaBancaria {
+@Table(name = "PagosRealizados")
+public class PagosRealizados {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="Id_CuentaBancaria")
+    @Column(name="Id_Pago")
     private Long id;
-    public CuentaBancaria(){
-
-    }
 }

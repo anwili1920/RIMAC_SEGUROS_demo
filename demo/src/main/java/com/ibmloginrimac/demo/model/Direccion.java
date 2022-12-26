@@ -11,14 +11,18 @@ public class Direccion {
     @Column(name="Id_Direccion")
     private Long id;
 
-	@ManyToOne
-	@JoinColumn(name = "Fid_Distrito")
+	@OneToOne
+	@JoinColumn(name = "Fid_Distrito", insertable = false , updatable = false)
 	private Distrito distrito;
 
-	@ManyToOne
-	@JoinColumn(name = "Fid_Departamento")
+	@OneToOne
+	@JoinColumn(name = "Fid_Departamento", insertable = false , updatable = false)
 	private Departamento departamento;
 
+    @OneToOne
+	@JoinColumn(name = "Fid_Persona", insertable = false , updatable = false)
+	private Persona persona;
+    
     @Column(name="Detalle")
     private String detalle;
 
