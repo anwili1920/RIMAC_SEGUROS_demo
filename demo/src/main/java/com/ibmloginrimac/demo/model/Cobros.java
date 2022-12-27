@@ -26,6 +26,12 @@ public class Cobros {
     @Column(name = "Modalidad_Cobro")
     private String modalidadCobro;
 
+    public String getModalidadCobro() {
+        return modalidadCobro;
+    }
+    public void setModalidadCobro(String modalidadCobro) {
+        this.modalidadCobro = modalidadCobro;
+    }
     public Cobros() {
     }
     public Long getId() {
@@ -64,12 +70,7 @@ public class Cobros {
     public void setFechaCobro(LocalDate fechaCobro) {
         this.fechaCobro = fechaCobro;
     }
-    public LocalDate getModalidadCobro() {
-        return modalidadCobro;
-    }
-    public void setModalidadCobro(LocalDate modalidadCobro) {
-        this.modalidadCobro = modalidadCobro;
-    }
+   
     
     
 }

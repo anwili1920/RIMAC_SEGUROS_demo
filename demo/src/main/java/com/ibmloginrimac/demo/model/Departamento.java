@@ -52,6 +52,6 @@ public class Departamento {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
    
 }

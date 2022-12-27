@@ -22,13 +22,11 @@ public class Empleado {
     private Persona persona;
 
     @OneToMany(mappedBy = "autor")
-	@JoinColumn(name = "documentos", insertable = false , updatable = false)
-    // no vamos a insertar ni actualizar ninguna fila en la tabla cliente
 	private List<Documento> documentos;
 
     public Empleado() {
     }
-    
+
     public Long getId() {
         return id;
     }
