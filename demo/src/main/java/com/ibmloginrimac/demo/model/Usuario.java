@@ -1,4 +1,6 @@
 package com.ibmloginrimac.demo.model;
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -8,6 +10,10 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="Id_Usuario")
     private Long id;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<PlanCuotas> planCuotas;
+    
     public Usuario() {
         
     }

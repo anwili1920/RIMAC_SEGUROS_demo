@@ -28,9 +28,59 @@ public class Direccion {
 
     @Column(name="Numero_Domicilio")
     private Integer numeroDomicilio;
-
+    
     public Direccion() {
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Distrito getDistrito() {
+        return distrito;
+    }
+
+    public void setDistrito(Distrito distrito) {
+        this.distrito = distrito;
+    }
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
+    }
+
+    public Persona getPersona() {
+        return persona;
+    }
+
+    public void setPersona(Persona persona) {
+        this.persona = persona;
+    }
+
+    public String getDetalle() {
+        return detalle;
+    }
+
+    public void setDetalle(String detalle) {
+        this.detalle = detalle;
+    }
+
+    public Integer getNumeroDomicilio() {
+        return numeroDomicilio;
+    }
+
+    public void setNumeroDomicilio(Integer numeroDomicilio) {
+        this.numeroDomicilio = numeroDomicilio;
+    }
+
+    
     
 
 }

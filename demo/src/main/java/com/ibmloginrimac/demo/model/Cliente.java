@@ -20,12 +20,24 @@ public class Cliente {
     private Empresa empresa;
 
     @OneToMany(mappedBy = "cliente")
-    @JoinColumn(name = "Fid_auto", insertable = false , updatable = false)
     private List<Auto> autos;
+    
+    @OneToMany(mappedBy = "cliente")
+    private List<Familiar> familiares;
+
+   
+
     public Cliente(){
         
     }
-    
+
+    public List<Familiar> getFamiliares() {
+        return familiares;
+    }
+
+    public void setFamiliares(List<Familiar> familiares) {
+        this.familiares = familiares;
+    }
     public Long getId() {
         return id;
     }

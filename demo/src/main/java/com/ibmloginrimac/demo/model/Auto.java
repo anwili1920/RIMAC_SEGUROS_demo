@@ -9,7 +9,7 @@ public class Auto {
     @Column(name="Id_Auto")
     private Long id;
 
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "Fid_Cliente", insertable = false , updatable = false)
     // no vamos a insertar ni actualizar ninguna fila en la tabla cliente
 	private Cliente cliente;

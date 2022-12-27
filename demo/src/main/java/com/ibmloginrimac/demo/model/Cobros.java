@@ -23,5 +23,53 @@ public class Cobros {
     private LocalDate fechaEmision;
     @Column(name = "Fecha_Cobro")
     private LocalDate fechaCobro;
+    @Column(name = "Modalidad_Cobro")
+    private String modalidadCobro;
+
+    public Cobros() {
+    }
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public Usuario getUsuario() {
+        return usuario;
+    }
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    public Siniestro getSiniestro() {
+        return siniestro;
+    }
+    public void setSiniestro(Siniestro siniestro) {
+        this.siniestro = siniestro;
+    }
+    public Seguro getSeguro() {
+        return seguro;
+    }
+    public void setSeguro(Seguro seguro) {
+        this.seguro = seguro;
+    }
+    public LocalDate getFechaEmision() {
+        return fechaEmision;
+    }
+    public void setFechaEmision(LocalDate fechaEmision) {
+        this.fechaEmision = fechaEmision;
+    }
+    public LocalDate getFechaCobro() {
+        return fechaCobro;
+    }
+    public void setFechaCobro(LocalDate fechaCobro) {
+        this.fechaCobro = fechaCobro;
+    }
+    public LocalDate getModalidadCobro() {
+        return modalidadCobro;
+    }
+    public void setModalidadCobro(LocalDate modalidadCobro) {
+        this.modalidadCobro = modalidadCobro;
+    }
+    
     
 }

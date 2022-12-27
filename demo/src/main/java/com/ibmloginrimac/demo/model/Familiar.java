@@ -8,4 +8,17 @@ public class Familiar {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="Id_Familiar")
     private Long id;
+
+    @OneToOne
+    @JoinColumn(name="Datos",insertable = false,updatable = false)
+    private Persona datos; //ver si se va a insertar o no 
+
+    @ManyToOne
+    @JoinColumn(name="Cliente",insertable = false,updatable = false)
+    private Cliente cliente; 
+
+    @Column(name = "Relacion")
+    private String relacion;
+
+    
 }

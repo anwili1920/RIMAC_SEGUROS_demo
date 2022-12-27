@@ -1,4 +1,6 @@
 package com.ibmloginrimac.demo.model;
+import java.util.List;
+
 import jakarta.persistence.*; 
 @Entity
 @Table(name = "Persona")
@@ -30,6 +32,10 @@ public class Persona {
     
     @Column(name="Activo")
     private boolean activo=true;
+
+    @OneToMany(mappedBy = "persona")
+    @JoinColumn(name = "Fid_Familiar", insertable = false , updatable = false)
+    private List<Familiar> familiares;
     
     public Persona() {
     
