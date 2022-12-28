@@ -22,8 +22,6 @@ public class LoginUseCase {
 
     public LoginResponseDTO ejecutar(LoginInputDTO loginInputDTO){
         Usuario usuario = usuarioRepository.findByEmail(loginInputDTO.getEmail()).orElse(null); 
-
-        String pass = hasher.hash("123456");
         if(usuario == null || !hasher.compare(loginInputDTO.getPassword(), usuario.getPassword())){
             return new LoginResponseDTO(null); 
         }
