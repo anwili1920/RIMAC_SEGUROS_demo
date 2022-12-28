@@ -2,9 +2,13 @@ package com.ibmloginrimac.demo.model;
 import java.time.LocalDate;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "Siniestro")
+@Setter @Getter @NoArgsConstructor
 public class Siniestro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,46 +23,4 @@ public class Siniestro {
 
     @Column(name = "Fecha_Ocurrida")
     private LocalDate fechaOcurrida;
-
-    public Siniestro(Long id, String nombre, String descripcion, LocalDate fechaOcurrida) {
-        this.id = id;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.fechaOcurrida = fechaOcurrida;
-    }
-
-    public Siniestro() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public LocalDate getFechaOcurrida() {
-        return fechaOcurrida;
-    }
-
-    public void setFechaOcurrida(LocalDate fechaOcurrida) {
-        this.fechaOcurrida = fechaOcurrida;
-    }
 }

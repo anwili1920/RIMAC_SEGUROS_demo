@@ -2,9 +2,13 @@ package com.ibmloginrimac.demo.model;
 import java.time.LocalDate;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "Cobros")
+@Setter @Getter @NoArgsConstructor
 public class Cobros {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,52 +29,5 @@ public class Cobros {
     private LocalDate fechaCobro;
     @Column(name = "Modalidad_Cobro")
     private String modalidadCobro;
-
-    public String getModalidadCobro() {
-        return modalidadCobro;
-    }
-    public void setModalidadCobro(String modalidadCobro) {
-        this.modalidadCobro = modalidadCobro;
-    }
-    public Cobros() {
-    }
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public Usuario getUsuario() {
-        return usuario;
-    }
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-    public Siniestro getSiniestro() {
-        return siniestro;
-    }
-    public void setSiniestro(Siniestro siniestro) {
-        this.siniestro = siniestro;
-    }
-    public Seguro getSeguro() {
-        return seguro;
-    }
-    public void setSeguro(Seguro seguro) {
-        this.seguro = seguro;
-    }
-    public LocalDate getFechaEmision() {
-        return fechaEmision;
-    }
-    public void setFechaEmision(LocalDate fechaEmision) {
-        this.fechaEmision = fechaEmision;
-    }
-    public LocalDate getFechaCobro() {
-        return fechaCobro;
-    }
-    public void setFechaCobro(LocalDate fechaCobro) {
-        this.fechaCobro = fechaCobro;
-    }
-   
-    
     
 }

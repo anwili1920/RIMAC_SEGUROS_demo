@@ -14,11 +14,10 @@ public class Familiar {
     private Persona datos; //ver si se va a insertar o no 
 
     @ManyToOne
-    @JoinColumn(name="Cliente",insertable = false,updatable = false)
-    private Cliente cliente; 
+    @JoinColumn(name="Persona",insertable = false,updatable = false)
+    private Persona persona; 
 
     @Column(name = "Relacion")
     private String relacion;
 
-    
 }

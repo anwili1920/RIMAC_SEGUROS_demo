@@ -24,5 +24,4 @@ public class Tramite {
 
     @Column(name="Descripcion")
 	private String descripcion;
-
 }

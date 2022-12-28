@@ -21,7 +21,7 @@ public class Empleado {
 	@JoinColumn(name = "Fid_Persona", insertable = false , updatable = false)
     private Persona persona;
 
-    @OneToMany(mappedBy = "autor")
+    @OneToMany(mappedBy = "empleado")
 	private List<Documento> documentos;
 
     public Empleado() {

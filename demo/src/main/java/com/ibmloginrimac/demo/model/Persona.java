@@ -1,5 +1,4 @@
 package com.ibmloginrimac.demo.model;
-import java.util.List;
 
 import jakarta.persistence.*; 
 @Entity
@@ -16,9 +15,9 @@ public class Persona {
     private String nombre1;
     @Column(name="Nombre2")
     private String nombre2;
-    @Column(name="Appellido1")
+    @Column(name="Apellido1")
     private String apellido1;
-    @Column(name="Appellido2")
+    @Column(name="Apellido2")
     private String apellido2;
     @Column(name="Edad",nullable = false)
     private Integer edad;
@@ -32,10 +31,6 @@ public class Persona {
     
     @Column(name="Activo")
     private boolean activo=true;
-
-    @OneToMany(mappedBy = "persona")
-    @JoinColumn(name = "Fid_Familiar", insertable = false , updatable = false)
-    private List<Familiar> familiares;
     
     public Persona() {
     

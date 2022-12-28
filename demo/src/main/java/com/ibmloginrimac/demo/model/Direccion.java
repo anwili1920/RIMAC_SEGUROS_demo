@@ -1,9 +1,13 @@
 package com.ibmloginrimac.demo.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "Direccion")
+@Setter @Getter @NoArgsConstructor
 public class Direccion {
 
     @Id
@@ -11,11 +15,11 @@ public class Direccion {
     @Column(name="Id_Direccion")
     private Long id;
 
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "Fid_Distrito", insertable = false , updatable = false)
 	private Distrito distrito;
 
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "Fid_Departamento", insertable = false , updatable = false)
 	private Departamento departamento;
 
@@ -28,59 +32,5 @@ public class Direccion {
 
     @Column(name="Numero_Domicilio")
     private Integer numeroDomicilio;
-    
-    public Direccion() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Distrito getDistrito() {
-        return distrito;
-    }
-
-    public void setDistrito(Distrito distrito) {
-        this.distrito = distrito;
-    }
-
-    public Departamento getDepartamento() {
-        return departamento;
-    }
-
-    public void setDepartamento(Departamento departamento) {
-        this.departamento = departamento;
-    }
-
-    public Persona getPersona() {
-        return persona;
-    }
-
-    public void setPersona(Persona persona) {
-        this.persona = persona;
-    }
-
-    public String getDetalle() {
-        return detalle;
-    }
-
-    public void setDetalle(String detalle) {
-        this.detalle = detalle;
-    }
-
-    public Integer getNumeroDomicilio() {
-        return numeroDomicilio;
-    }
-
-    public void setNumeroDomicilio(Integer numeroDomicilio) {
-        this.numeroDomicilio = numeroDomicilio;
-    }
-
-    
-    
 
 }

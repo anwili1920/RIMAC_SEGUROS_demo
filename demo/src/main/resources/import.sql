@@ -1,0 +1,1 @@
+INSERT INTO usuario(id_usuario, email, `password`) values (1, 'angie.centeno@pucp.edu.pe', '$2y$12$hwNlRNtrKpxdIGW0hYFykuUeRVVcUhGMQNJxRu1YIml2PuK23XfLS');
