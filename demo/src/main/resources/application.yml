@@ -8,7 +8,7 @@ spring:
         url: jdbc:oracle:thin:@52.116.40.218:1521/orcl
         username: system
         password: csmIBM2022SSA
-
+        schema: ADMIN_RIMAC
         # mysql
         # driver-class-name: com.mysql.cj.jdbc.Driver
         # url: jdbc:mysql://52.116.40.222:3306/empresa_seguro
@@ -16,7 +16,7 @@ spring:
         # password: uX8bD5%ypdBaibm
     jpa:
         hibernate:
-            ddl-auto: validate
+            ddl-auto: none
 #validate: validate the schema, makes no changes to the database.
 # update: update the schema.
 # create: creates the schema, destroying previous data.

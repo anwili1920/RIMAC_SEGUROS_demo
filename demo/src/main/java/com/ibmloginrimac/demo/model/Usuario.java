@@ -1,5 +1,4 @@
 package com.ibmloginrimac.demo.model;
-import java.util.List;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -7,17 +6,29 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Usuario")
+@Table(name = "USUARIO")
 @Getter @Setter @NoArgsConstructor
 public class Usuario {
 
     @Id
-    @Column(name="Id_Usuario")
-    private Long id;
+    @Column(name="ID_USUARIO")
+    private Integer id;
 
-    private String email; 
+    @Column(name="ID_PERSONA")
+    private Integer idPersona;
 
+    @Column(name="EMAIL")
+    private String email;
+
+    @Column(name="CONTRASEÑA")
     private String password; 
     
-
+    @Column(name="TELEFONO")
+    private Integer telefono; 
+    
+    @Column(name="TIPO_USUARIO")
+    private String tipoUsuario; 
+    
+    @Column(name="ACTIVO")
+    private Boolean activo; 
 }
