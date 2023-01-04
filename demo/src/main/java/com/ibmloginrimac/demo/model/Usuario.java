@@ -12,7 +12,6 @@ import lombok.Setter;
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="Id_Usuario")
     private Long id;
 
